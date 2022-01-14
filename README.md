@@ -12,6 +12,7 @@ from original project I plan to build new features to the app, possible options:
     1) option to save and download budget info for later?
         like dropbox, create link and send to people? 
     2) pie chart for total, giving insight into expenses?
+        https://github.com/toomuchdesign/react-minimal-pie-chart#custom-labels-with-label-render-prop
     3) edit budget name
     4) edit expense name, value
     5) be able to arrange budget cards
