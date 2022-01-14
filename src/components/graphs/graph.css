@@ -1,0 +1,10 @@
+.custom_graph_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.custom_carousel_div {
+    height: 400px;
+}

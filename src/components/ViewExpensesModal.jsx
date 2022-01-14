@@ -13,8 +13,8 @@ const ViewExpensesModal = ( { budgetId, handleClose } ) => {
         <Modal show={budgetId != null} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>
-                    <Stack direction="horizontal" gap="2">
-                        <div>Expenses - {budget?.name}</div>
+                    <Stack direction="horizontal" gap={5}>
+                        <div className='text-break'>Expenses - {budget?.name}</div>
                         {budgetId !== UNCATEGORIZED_BUDGET_ID && (
                         <Button
                             onClick={() => {

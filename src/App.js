@@ -9,6 +9,7 @@ import AddExpenseModal from './components/AddExpenseModal'
 import UncategorizedBudgetCard from './components/UncategorizedBudgetCard'
 import ViewExpensesModal from './components/ViewExpensesModal'
 import TotalBudgetCard from './components/TotalBudgetCard'
+import GraphDisplay from './components/graphs/GraphDisplay';
 
 import { useBudgets, UNCATEGORIZED_BUDGET_ID } from './contexts/BudgetContext';
 
@@ -32,6 +33,7 @@ function App() {
         <Button variant='primary' onClick={() => setShowAddBudgetModal(true)}>Add Budget</Button>
         <Button variant='outline-primary' onClick={openAddExpenseModal}>Add Expense</Button> 
       </Stack>
+      <GraphDisplay />
       <div className='custom_card_grid'>
         {budgets.map(budget => {
 
