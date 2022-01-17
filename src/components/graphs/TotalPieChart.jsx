@@ -7,7 +7,7 @@ const TotalPieChart = () => {
     
     const { budgets, getBudgetExpenses } = useBudgets()
 
-    console.log(budgets)
+    const totalBudget = budgets.map(budget => budget.max).reduce((total, budget) => total + budget, 0)
 
     //colors from which to chart colors are chosen from (limited, must expand)
     const colors = ['#0275d8','#f0ad4e','#5cb85c','#5bc0de','#d9534f','#292b2c','#0275d8','#f0ad4e','#5cb85c','#5bc0de','#d9534f','#292b2c']
