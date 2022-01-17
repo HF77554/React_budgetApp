@@ -11,3 +11,10 @@ export const getProgressBarVariant = ({amount, max}) => {
     if (ratio < 0.75) return 'warning'
     return 'danger'
 }
+
+export const percentageValue = ( {amount, total} ) => {
+
+    const ratio = amount / total
+
+    return ratio*100
+}
