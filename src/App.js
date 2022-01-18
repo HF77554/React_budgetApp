@@ -35,6 +35,7 @@ function App() {
       </Stack>
       <GraphDisplay />
       <div className='custom_card_grid'>
+        <TotalBudgetCard />
         {budgets.map(budget => {
 
           const amount = getBudgetExpenses(budget.id).reduce((total,expense) => total + expense.amount, 0)
@@ -51,7 +52,6 @@ function App() {
           ) 
           })}
           <UncategorizedBudgetCard onAddExpenseClick={openAddExpenseModal} onViewExpensesClick={() => setViewExpensesModalBudgetId(UNCATEGORIZED_BUDGET_ID)}/>
-          <TotalBudgetCard />
       </div>
     </Container>
 
