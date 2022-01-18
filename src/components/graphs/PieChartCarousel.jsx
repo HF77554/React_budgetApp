@@ -42,7 +42,7 @@ const PieChartCarousel = () => {
 
                 return(
                     <Carousel.Item key={`${budget.id}_${int}`} interval={60000} className='custom_carousel_item'>
-                        <h2 className='text-center'>{budget.name.toUpperCase()}</h2>
+                        <h2>{budget.name.toUpperCase()}</h2>
                         <PieChartDisplay 
                             data={data} 
                             radius={40}

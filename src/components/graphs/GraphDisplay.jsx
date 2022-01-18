@@ -8,10 +8,16 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 const GraphDisplay = () => {
     return (
-        <div className='custom_graph_container my-4 rounded bg bg-light border border-5'>
-            <TotalPieChart />
-            <PieChartCarousel />
-        </div>
+        <Container className='my-4 rounded bg bg-light border border-5'>
+            <Row>
+                <Col>
+                    <TotalPieChart />
+                </Col>
+                <Col>
+                    <PieChartCarousel />
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
