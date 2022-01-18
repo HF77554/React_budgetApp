@@ -4,6 +4,8 @@ import './graph.css'
 import PieChartCarousel from './PieChartCarousel'
 import TotalPieChart from './TotalPieChart'
 
+import { Container, Row, Col } from 'react-bootstrap'
+
 const GraphDisplay = () => {
     return (
         <div className='custom_graph_container my-4 rounded bg bg-light border border-5'>

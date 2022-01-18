@@ -2,6 +2,8 @@ import React from 'react'
 import './graph.css'
 
 import { useBudgets } from '../../contexts/BudgetContext';
+import {percentageValue} from '../../utilities/Utilities'
+import PieChartDisplay from './PieChartDisplay'
 
 const TotalPieChart = () => {
     
@@ -12,9 +14,20 @@ const TotalPieChart = () => {
     //colors from which to chart colors are chosen from (limited, must expand)
     const colors = ['#0275d8','#f0ad4e','#5cb85c','#5bc0de','#d9534f','#292b2c','#0275d8','#f0ad4e','#5cb85c','#5bc0de','#d9534f','#292b2c']
 
+    const data = budgets.map((budget, ind) => {return (
+        { 
+            title:budget.name.toUpperCase() , 
+            value: percentageValue( {amount:budget.max, total:totalBudget}), 
+            color:colors[ind]
+        }
+    )})
+
     return (
         <div className='custom_carousel_div'>
-            Test
+            <div className='custom_carousel_item'>
+                <h2 className='text-center'>CATEGORY BREAKDOWN</h2>
+                <PieChartDisplay data={data} radius={40} />
+            </div>
         </div>
     )
 }
@@ -23,10 +36,9 @@ export default TotalPieChart
 
 /*
 <div className='custom_carousel_div'>
-            {budgets.map((budget, int) => {
+            {budgets.map(budget => {
 
-                const amount = getBudgetExpenses(budget.id).reduce((total,expense) => total + expense.amount, 0)
-                const remainingBudget = budget.max-amount
+                const max = budget.max
 
                 const currentData = getBudgetExpenses(budget.id).map((expense,ind) => 
                     {return (
@@ -34,7 +46,8 @@ export default TotalPieChart
                             title:expense.description.toUpperCase() , 
                             value: percentageValue( {amount:expense.amount, total:budget.max}) , 
                             color:colors[ind]})
-                        })
+                        }
+                    )
 
                 //updates data to pass to pie chart, if within budget creates a new item to add as "unused" in which to put the remaining percetange
                 const data = (remainingBudget > 0) ? 

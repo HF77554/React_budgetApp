@@ -16,5 +16,5 @@ export const percentageValue = ( {amount, total} ) => {
 
     const ratio = amount / total
 
-    return ratio*100
+    return Math.round(ratio*100)
 }
