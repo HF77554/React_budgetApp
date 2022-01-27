@@ -11,7 +11,7 @@ const GraphDisplay = () => {
         <Container className='my-4 rounded bg bg-light border border-5'>
             <Row>
                 <Col>
-                    
+                    <TotalPieChart />
                 </Col>
                 <Col>
                     <PieChartCarousel />
