@@ -10,4 +10,5 @@ Original creation from web dev simplified, using his original set up as a way to
 
 from original project I built new features to the app:
     1) pie chart showcase
+    1) Budget deletion
   
