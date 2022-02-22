@@ -33,7 +33,7 @@ function App() {
         <Button variant='primary' onClick={() => setShowAddBudgetModal(true)}>Add Budget</Button>
         <Button variant='outline-primary' onClick={openAddExpenseModal}>Add Expense</Button> 
       </Stack>
-      <GraphDisplay />
+      {budgets.length !== 0 && <GraphDisplay />}
       <div className='custom_card_grid'>
         <TotalBudgetCard />
         {budgets.map(budget => {
