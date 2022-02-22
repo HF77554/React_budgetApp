@@ -3,6 +3,7 @@
 App will help you create and follow a budget.
 
 Original creation from web dev simplified, using his original set up as a way to learn, review, and better understand key concepts like:
+ Markup : * Bullet list
 Markup : * useContext
          * bootStrap/React
          * component arrangement
